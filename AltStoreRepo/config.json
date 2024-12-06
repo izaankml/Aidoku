@@ -1,0 +1,55 @@
+{
+  "repo": {
+    "name": "Aidoku Repository",
+    "identifier": "xyz.skitty.repos.Aidoku",
+    "subtitle": "A free and open source manga reader for iOS and iPadOS",
+    "website": "https://aidoku.app",
+    "tintColor": "#FF2F52",
+    "featuredApps": ["xyz.skitty.Aidoku"]
+  },
+  "apps": [
+    {
+      "name": "Aidoku",
+      "bundleIdentifier": "xyz.skitty.Aidoku",
+      "filename": "Aidoku.ipa",
+      "githubOwner": "Aidoku",
+      "githubRepository": "Aidoku",
+      "skipPrerelease": true,
+      "developerName": "Skitty",
+      "subtitle": "A free and open source manga reader for iOS and iPadOS",
+      "localizedDescription": "Aidoku is a free and open source manga reading application for iOS and iPadOS.\n\n\nFEATURES\n\nExternal Sources\n• Add a multitude of external sources to browse hundreds of different titles.\n\nOpen Source\n• Fully open source and ad-free, forever.\n• Contribute on GitHub!\n\nConfigurable\n• Customize Aidoku to your liking with global and source-specific settings\n\n• iCloud Sync Support\n• Downloads\n• Tracker Support\n\n\nMore information at https://aidoku.app/",
+      "iconURL": "https://aidoku.app/images/icon.png",
+      "tintColor": "#FF2F52",
+      "appPermissions": {
+        "entitlements": [
+          "aps-environment",
+          "com.apple.developer.icloud-container-identifiers",
+          "com.apple.developer.icloud-container-environment",
+          "com.apple.developer.icloud-services",
+          "com.apple.developer.ubiquity-kvstore-identifier"
+        ],
+        "privacy": {
+          "NSFaceIDUsageDescription": "Aidoku needs FaceID permissions for user-defined settings.",
+          "NSPhotoLibraryUsageDescription": "Aidoku needs permission to save pages in your photo library."
+        }
+      },
+      "screenshots": [
+        {
+          "imageURL": "https://aidoku.app/images/library.png",
+          "width": 426,
+          "height": 866
+        },
+        {
+          "imageURL": "https://aidoku.app/images/source.png",
+          "width": 426,
+          "height": 866
+        },
+        {
+          "imageURL": "https://aidoku.app/images/reader.png",
+          "width": 426,
+          "height": 866
+        }
+      ]
+    }
+  ]
+}
