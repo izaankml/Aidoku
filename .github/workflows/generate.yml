@@ -1,0 +1,28 @@
+name: Update Repository
+on:
+  release:
+    types: [released]
+  workflow_dispatch:
+
+jobs:
+  generate:
+    name: Generate Repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: 'altstore-repo'
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: Run altstore-github
+        run: npx git+https://github.com/izaankml/altstore-github.git --config AltStoreRepo/config.json > AltStoreRepo/index.html
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./AltStoreRepo
+          publish_branch: altstore-repo
+          commit_message: 'Update repository'
